@@ -1,0 +1,104 @@
+*{
+	margin-right: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+body{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+}
+.pembungkus{
+	position: absolute;
+	top: 33%;
+	left: 30%;
+	transform: translate(-50% -50%);
+	width: 600px;
+	background-color: #F7E2E2;
+	border-radius: 10px;
+	box-shadow: 15px rgb(0, 0, 0);
+}
+.pembungkus .text{
+	text-align: center;
+	padding: 20px 0;
+	border-bottom: 1px solid grey;
+}
+.pembungkus form{
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+form .txt_field{
+	position: relative;
+	border-bottom: 2px solid pink;
+	margin: 20px 0;
+	background-color: skyblue;
+	border-radius: 10px;
+}
+.txt_field input{
+	width: 100%;
+	padding: 0 5;
+	height: 50%;
+	font-size: 16px;
+	border:none;
+	background-color: none;
+	outline: none;
+}
+.txt_field label{
+	position: absolute;
+	top: 60%;
+	left: 5px;
+	color: black;
+	transform: translateY(-70%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+.txt_field span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: grey;
+	transition:  .5s;
+}
+.txt_field input:focus~label,
+.txt_field input:valid~label{
+	top: -5px;
+	color: black;
+}
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before{
+	width: 100px;
+}
+input [type="submit"]{
+	width: 46%;
+	margin-left: 2%;
+	margin-right: 1%;
+	height: 40px;
+	background: red;
+	border-radius: 10px;
+	border:1px solid;
+	font-size: 18px;
+	color: white;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 20px;
+}
+input[type="submit"]:hover{
+	border-color: grey;
+	background-color: pink;
+	transition: .5s;
+}
+form .bawah{
+	padding-bottom: 10px;
+	color: white;
+	text-decoration: none;
+}
